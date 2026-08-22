@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidad - Globoom</title>
+    <style>
+      :root {
+        --bg-dark: #0f172a;
+        --bg-darker: #020617;
+        --text-light: #f8fafc;
+        --text-muted: #94a3b8;
+        --primary: #8b5cf6;
+        --secondary: #ec4899;
+        --glass-bg: rgba(15, 23, 42, 0.6);
+        --glass-border: rgba(255, 255, 255, 0.12);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle at center, var(--bg-dark), var(--bg-darker));
+        color: var(--text-light);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 16px 24px 80px;
+      }
+      /* Sin esta barra el usuario queda atrapado: dentro de la app nativa la página
+         ocupa toda la pantalla y el botón atrás de Android cierra la app entera. */
+      .backbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        margin: 0 -24px 24px;
+        padding: calc(12px + env(safe-area-inset-top)) 24px 12px;
+        background: rgba(2, 6, 23, 0.92);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--glass-border);
+      }
+      .backbar button {
+        background: none;
+        border: 1px solid var(--glass-border);
+        border-radius: 999px;
+        color: var(--text-light);
+        font: inherit;
+        font-size: 0.95rem;
+        padding: 10px 18px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .backbar button:active { background: rgba(255, 255, 255, 0.1); }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 4px;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .updated {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-bottom: 32px;
+      }
+      h2 {
+        font-size: 1.25rem;
+        margin-top: 40px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid var(--glass-border);
+        padding-bottom: 8px;
+      }
+      p, li { color: #e2e8f0; }
+      ul { padding-left: 20px; }
+      a { color: #93c5fd; }
+      .card {
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        border-radius: 16px;
+        padding: 20px 24px;
+        margin: 20px 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0;
+      }
+      th, td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--glass-border);
+        font-size: 0.92rem;
+      }
+      th { color: var(--text-muted); font-weight: 600; }
+      footer {
+        margin-top: 48px;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="backbar">
+        <button type="button" onclick="volverAlJuego()">← Volver al juego</button>
+      </div>
+      <h1>Política de Privacidad de Globoom</h1>
+      <p class="updated">Última actualización: 22 de agosto de 2026</p>
+
+      <p>
+        Esta política de privacidad explica qué información trata la aplicación
+        <strong>Globoom</strong> (en adelante, "la App"), disponible para Android, iOS y
+        navegador web, y cómo se usa. Al utilizar la App, aceptas las prácticas
+        descritas aquí.
+      </p>
+
+      <h2>1. Responsable</h2>
+      <p>
+        La App está desarrollada y mantenida por Sergio Iglesias Leite, como
+        desarrollador independiente (sin razón social registrada por el momento).
+        Para cualquier consulta sobre esta política o sobre tus datos, puedes
+        escribir a <a href="mailto:sergioiglesiasleite@gmail.com">sergioiglesiasleite@gmail.com</a>.
+      </p>
+
+      <h2>2. Qué datos NO recoge la App</h2>
+      <p>
+        Globoom no requiere registro ni cuenta de usuario, ni email, ni teléfono,
+        para jugar. No accedemos a tus contactos, cámara, micrófono ni
+        ubicación precisa. La única excepción es el nombre que tú decides
+        escribir, de forma voluntaria, si quieres aparecer en la clasificación
+        de Hardcore — ver el punto 4.
+      </p>
+
+      <h2>3. Datos guardados en tu dispositivo</h2>
+      <div class="card">
+        <p>La App guarda localmente en tu dispositivo (mediante <code>localStorage</code>), sin enviarlo a ningún servidor propio:</p>
+        <ul>
+          <li>Tu progreso de niveles y estrellas obtenidas.</li>
+          <li>Tus monedas del juego y los objetos de la tienda comprados/equipados.</li>
+          <li>Tu récord de puntuación en el modo Hardcore.</li>
+          <li>La fecha de tu última recompensa diaria reclamada.</li>
+        </ul>
+        <p>
+          Estos datos son solo tuyos, viven en tu dispositivo y se borran si
+          desinstalas la App o borras los datos del navegador. No tenemos
+          acceso a ellos ni los recopilamos en ningún servidor propio.
+        </p>
+      </div>
+
+      <h2>4. Clasificación de Hardcore (opcional)</h2>
+      <p>
+        El modo Hardcore tiene una clasificación con las mejores puntuaciones
+        de todos los jugadores. Guardarte en ella es <strong>opcional y
+        voluntario</strong>: solo se te pide un nombre si tu puntuación entra
+        en el top 10 de tu dispositivo, y puedes escribir lo que quieras (no
+        hace falta que sea tu nombre real).
+      </p>
+      <div class="card">
+        <p>Si guardas tu marca, se envían y almacenan en un servidor de
+          <strong>Supabase</strong> (nuestro proveedor de base de datos):</p>
+        <ul>
+          <li>El nombre que escribiste.</li>
+          <li>Tu puntuación y el tiempo jugado en esa partida.</li>
+          <li>Un identificador anónimo de tu dispositivo (no es tu nombre, email
+            ni ningún dato que te identifique directamente), para poder
+            actualizar tu propia marca sin que puedas modificar la de otro
+            jugador.</li>
+        </ul>
+        <p>
+          Esta clasificación es pública: cualquiera que abra la pantalla de
+          clasificación puede ver los nombres y puntuaciones del top 10. No
+          publiques información personal en el nombre.
+        </p>
+      </div>
+
+      <h2>5. Publicidad (Google AdMob)</h2>
+      <p>
+        Globoom se financia mostrando anuncios a través de <strong>Google AdMob</strong>:
+        banners en las pantallas de menú, anuncios a pantalla completa al terminar una
+        partida, y anuncios de vídeo con recompensa que decides ver tú (para revivir o
+        para doblar las monedas ganadas). Para poder mostrártelos, AdMob y sus socios
+        publicitarios pueden recopilar y tratar automáticamente:
+      </p>
+      <table>
+        <thead>
+          <tr><th>Dato</th><th>Para qué se usa</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Identificador de publicidad del dispositivo (AAID en Android / IDFA en iOS)</td><td>Medir y, si das tu consentimiento, personalizar los anuncios que ves</td></tr>
+          <tr><td>Dirección IP (aproximada)</td><td>Estimar tu país/región para cumplir la normativa local</td></tr>
+          <tr><td>Información técnica del dispositivo (modelo, sistema operativo, idioma)</td><td>Servir un anuncio compatible con tu dispositivo</td></tr>
+          <tr><td>Interacciones con los anuncios (impresiones, clics)</td><td>Medir rendimiento y evitar fraude publicitario</td></tr>
+        </tbody>
+      </table>
+      <p>
+        Estos datos los trata Google, no Sergio Iglesias Leite. Puedes
+        consultar la
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a>
+        y cómo Google usa los datos de sus socios en
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">este enlace</a>.
+      </p>
+
+      <h2>6. Tu consentimiento</h2>
+      <p>
+        Si te encuentras en el Espacio Económico Europeo, Reino Unido o
+        Suiza, la primera vez que abras la App te mostraremos un formulario
+        de consentimiento (a través del sistema UMP de Google) para que
+        elijas si permites anuncios personalizados o no. En iOS, además, el
+        propio sistema operativo te pedirá permiso de seguimiento
+        ("App Tracking Transparency") antes de que ningún identificador de
+        publicidad pueda usarse para personalizar anuncios.
+      </p>
+      <p>
+        Puedes cambiar de opinión en cualquier momento desde el botón
+        <strong>"Privacidad"</strong> en el menú principal de la App, que
+        vuelve a abrir tus opciones de consentimiento.
+      </p>
+
+      <h2>7. Menores de edad</h2>
+      <p>
+        Globoom no está dirigida específicamente a menores de 13 años y no
+        solicita conscientemente datos personales de menores. Si eres madre,
+        padre o tutor y crees que un menor a tu cargo nos ha facilitado datos
+        personales, contáctanos en el correo indicado arriba para eliminarlos.
+      </p>
+
+      <h2>8. Tus derechos</h2>
+      <p>
+        La forma más directa de ejercer tus derechos sobre los datos guardados
+        localmente en tu dispositivo (progreso, monedas, récords) es
+        desinstalar la App o borrar los datos del sitio desde tu navegador.
+        Si guardaste una marca en la clasificación de Hardcore y quieres que
+        borremos tu nombre y puntuación del servidor, escríbenos a
+        <a href="mailto:sergioiglesiasleite@gmail.com">sergioiglesiasleite@gmail.com</a>.
+        Para los datos que trata Google/AdMob, puedes ejercer tus derechos
+        (acceso, rectificación, supresión, oposición) directamente con Google
+        a través de su
+        <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">panel de privacidad</a>,
+        o retirando tu consentimiento a los anuncios personalizados desde el
+        botón "Privacidad" de la App.
+      </p>
+
+      <h2>9. Cambios en esta política</h2>
+      <p>
+        Podemos actualizar esta política si cambian las prácticas de la App
+        (por ejemplo, al añadir la versión web con otra red de anuncios).
+        Publicaremos siempre la versión vigente en esta misma dirección,
+        con la fecha de "última actualización" al principio.
+      </p>
+
+      <h2>10. Contacto</h2>
+      <p>
+        Para cualquier duda sobre esta política o sobre tus datos, escribe a
+        <a href="mailto:sergioiglesiasleite@gmail.com">sergioiglesiasleite@gmail.com</a>.
+      </p>
+
+      <footer>Globoom — Política de Privacidad</footer>
+    </main>
+    <script>
+      function volverAlJuego() {
+        // history.back() devuelve al juego tal y como estaba. El fallback usa una ruta
+        // relativa para que siga funcionando si se publica en un subdirectorio.
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = './';
+        }
+      }
+    </script>
+  </body>
+</html>

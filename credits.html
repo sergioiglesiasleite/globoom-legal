@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Créditos - Globoom</title>
+    <style>
+      :root {
+        --bg-dark: #0f172a;
+        --bg-darker: #020617;
+        --text-light: #f8fafc;
+        --text-muted: #94a3b8;
+        --primary: #8b5cf6;
+        --secondary: #ec4899;
+        --glass-bg: rgba(15, 23, 42, 0.6);
+        --glass-border: rgba(255, 255, 255, 0.12);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle at center, var(--bg-dark), var(--bg-darker));
+        color: var(--text-light);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 16px 24px 80px;
+      }
+      /* Sin esta barra el usuario queda atrapado: dentro de la app nativa la página
+         ocupa toda la pantalla y el botón atrás de Android cierra la app entera. */
+      .backbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        margin: 0 -24px 24px;
+        padding: calc(12px + env(safe-area-inset-top)) 24px 12px;
+        background: rgba(2, 6, 23, 0.92);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--glass-border);
+      }
+      .backbar button {
+        background: none;
+        border: 1px solid var(--glass-border);
+        border-radius: 999px;
+        color: var(--text-light);
+        font: inherit;
+        font-size: 0.95rem;
+        padding: 10px 18px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .backbar button:active { background: rgba(255, 255, 255, 0.1); }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 4px;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .intro {
+        color: var(--text-muted);
+        margin-bottom: 32px;
+      }
+      h2 {
+        font-size: 1.25rem;
+        margin-top: 40px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid var(--glass-border);
+        padding-bottom: 8px;
+      }
+      p, li { color: #e2e8f0; }
+      a { color: #93c5fd; }
+      .track {
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        padding: 14px 18px;
+        margin: 12px 0;
+      }
+      .track .name { font-weight: 600; }
+      .track .meta { color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; }
+      footer {
+        margin-top: 48px;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="backbar">
+        <button type="button" onclick="volverAlJuego()">← Volver al juego</button>
+      </div>
+      <h1>Créditos</h1>
+      <p class="intro">
+        Música usada temporalmente en Globoom mientras se producen las
+        composiciones definitivas del juego.
+      </p>
+
+      <h2>Música</h2>
+      <p>
+        Todas las pistas actuales son de <strong>Kevin MacLeod (incompetech.com)</strong>,
+        publicadas bajo licencia
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Attribution</a>.
+      </p>
+
+      <div class="track">
+        <div class="name">"Hyperfun" — Kevin MacLeod (incompetech.com)</div>
+        <div class="meta">Licencia: Creative Commons Attribution (creativecommons.org/licenses/by/4.0)</div>
+      </div>
+      <div class="track">
+        <div class="name">"Pixelland" — Kevin MacLeod (incompetech.com)</div>
+        <div class="meta">Licencia: Creative Commons Attribution (creativecommons.org/licenses/by/4.0)</div>
+      </div>
+      <div class="track">
+        <div class="name">"Rocket" — Kevin MacLeod (incompetech.com)</div>
+        <div class="meta">Licencia: Creative Commons Attribution (creativecommons.org/licenses/by/4.0)</div>
+      </div>
+      <div class="track">
+        <div class="name">"Digital Lemonade" — Kevin MacLeod (incompetech.com)</div>
+        <div class="meta">Licencia: Creative Commons Attribution (creativecommons.org/licenses/by/4.0)</div>
+      </div>
+      <div class="track">
+        <div class="name">"Cephalopod" — Kevin MacLeod (incompetech.com)</div>
+        <div class="meta">Licencia: Creative Commons Attribution (creativecommons.org/licenses/by/4.0)</div>
+      </div>
+      <div class="track">
+        <div class="name">"8bit Dungeon Level" — Kevin MacLeod (incompetech.com)</div>
+        <div class="meta">Licencia: Creative Commons Attribution (creativecommons.org/licenses/by/4.0)</div>
+      </div>
+      <div class="track">
+        <div class="name">"Volatile Reaction" — Kevin MacLeod (incompetech.com)</div>
+        <div class="meta">Licencia: Creative Commons Attribution (creativecommons.org/licenses/by/4.0)</div>
+      </div>
+      <div class="track">
+        <div class="name">"Space Jazz" — Kevin MacLeod (incompetech.com)</div>
+        <div class="meta">Licencia: Creative Commons Attribution (creativecommons.org/licenses/by/4.0)</div>
+      </div>
+      <div class="track">
+        <div class="name">"Merry Go" — Kevin MacLeod (incompetech.com)</div>
+        <div class="meta">Licencia: Creative Commons Attribution (creativecommons.org/licenses/by/4.0)</div>
+      </div>
+      <div class="track">
+        <div class="name">"8bit Dungeon Boss" — Kevin MacLeod (incompetech.com)</div>
+        <div class="meta">Licencia: Creative Commons Attribution (creativecommons.org/licenses/by/4.0)</div>
+      </div>
+
+      <footer>Globoom — Créditos</footer>
+    </main>
+    <script>
+      function volverAlJuego() {
+        // history.back() devuelve al juego tal y como estaba. El fallback usa una ruta
+        // relativa para que siga funcionando si se publica en un subdirectorio.
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = './';
+        }
+      }
+    </script>
+  </body>
+</html>
